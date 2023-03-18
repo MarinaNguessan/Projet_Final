@@ -1,0 +1,35 @@
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+  <div class="wrapper wrapper--w790">
+      <div class="card card-5 p-3">
+          <div class="card-heading">
+              <h4 class="title">Création de Chantier</h4>
+          </div>
+          <div class="card-body">
+              <form method="POST">
+                 <div class="row m-0 p-0">
+
+                  <div class="col-12 p-0 mb-3">
+                    <div class="d-flex flex-column">
+                      <label for="name" >Nom</label>
+                      <input type="text" class="form-control inptName" [(ngModel)]="sites.nom"  name="nom">
+                    </div>
+                  </div>
+
+                  <div class="col-12 p-0">
+                    <div class="d-flex flex-column">
+                      <label for="name" >Description  </label>
+                      <input type="text" class="form-control inptName" [(ngModel)]="sites.description" nam="description">
+
+                    </div>
+                  </div>
+
+                 </div>
+              </form>
+
+              <div class="w-100 justify-content-center d-flex">
+                <button class="btn btn-primary" (click)="soumettre()">Creer</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
