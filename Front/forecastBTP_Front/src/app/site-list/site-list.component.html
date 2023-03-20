@@ -12,10 +12,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>#D1</td>
-              <td>Consectetur adipisicing elit </td>
-              <td>Beulah Cummings</td>
+            <tr *ngFor="let site of sites">
+              <td>{{site.id}}</td>
+              <td>{{site.name}}</td>
+              <td>{{site.description}}</td>
               <td>
                 <div class="d-flex align-items-center">
                   <button type="button" class="btn btn-success btn-sm btn-icon-text mr-3">

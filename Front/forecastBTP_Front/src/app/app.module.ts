@@ -13,6 +13,13 @@ import { UpdateSiteComponent } from './update-site/update-site.component';
 import { IndexComponent } from './index/index.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CityListComponent } from './city-list/city-list.component';
+import { RiskComponent } from './risk/risk.component';
+import { CreatePeriodComponent } from './create-period/create-period.component';
+import { PreventiveActionComponent } from './preventive-action/preventive-action.component';
+import { CompanyComponent } from './company/company.component';
+import { LoginComponent } from './authentification/login/login.component';
+import { RegisterComponent } from './authentification/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +28,14 @@ import { FormsModule } from '@angular/forms';
     CreateSiteComponent,
     SiteListComponent,
     UpdateSiteComponent,
-    IndexComponent
+    IndexComponent,
+    CityListComponent,
+    RiskComponent,
+    CreatePeriodComponent,
+    PreventiveActionComponent,
+    CompanyComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

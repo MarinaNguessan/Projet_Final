@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpService } from '../services/api.service';
 import { VerificationService } from '../services/verification';
+import { FunctionSiteService } from '../services/functionSite';
+import { Site } from '../models/site';
 
 @Component({
   selector: 'app-create-site',
@@ -10,21 +12,20 @@ import { VerificationService } from '../services/verification';
 })
 export class CreateSiteComponent {
 
-  sites ={
-    nom:'',
-    description:'',
-  }
-  constructor(private api : HttpService, private verification : VerificationService, private router :Router){
+  sites!:Site
+  constructor(private api : FunctionSiteService, private verification : VerificationService, private router :Router){
+    this.sites = new Site(null!, null!)
 
   }
 
   soumettre(){
     const logVerification  = this.verification.verifyObj(this.sites);
-    if(logVerification.count>= 0)
+    if(logVerification.count>0){
+    console.log(this.sites)
       return alert("Veuillez remplir tout les champs");
 
-
-      return this.api.post("register",  this.sites).subscribe(
+    }
+      return this.api.postSites(this.sites).subscribe(
         {
           next : (response)=>{
               console.log(response);

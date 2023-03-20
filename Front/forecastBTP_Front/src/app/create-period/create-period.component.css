@@ -1,0 +1,10 @@
+.inptName{
+  padding:.5em;
+  border: 1px solid rgb(148, 146, 146);
+  border-radius: .5em;
+  width: 350px;
+}
+
+.divForm{
+  bottom: 50% !important;
+}
