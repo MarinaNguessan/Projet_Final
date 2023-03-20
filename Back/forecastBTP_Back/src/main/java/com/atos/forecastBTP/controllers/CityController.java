@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import com.atos.forecastBTP.models.City;
 import com.atos.forecastBTP.repository.CityRepository;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/cities")
 public class CityController {
     @Autowired
@@ -47,7 +49,7 @@ public class CityController {
     return new ResponseEntity<>(cityRepository.save(city), HttpStatus.CREATED);
   }
 
-  @DeleteMapping()
+  @DeleteMapping("/delete")
   public ResponseEntity<City> update(@Validated @RequestBody City city){
     return new ResponseEntity<>(cityRepository.save(city), HttpStatus.CREATED);
   }
