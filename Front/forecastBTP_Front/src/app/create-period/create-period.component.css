@@ -1,10 +1,23 @@
 .inptName{
   padding:.5em;
-  border: 1px solid rgb(148, 146, 146);
+  border: 1px solid rgb(241, 209, 209);
   border-radius: .5em;
-  width: 350px;
+  width: 100%;
 }
 
 .divForm{
   bottom: 50% !important;
+  margin-left: 5%;
+}
+
+.image{
+  background-image: url("/assets/images/logo-meteo.png");
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+}
+
+.card{
+  width: 500px;
+  height: 300px;
 }

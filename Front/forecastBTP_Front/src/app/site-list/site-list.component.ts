@@ -8,7 +8,7 @@ import { FunctionSiteService } from '../services/functionSite';
 })
 export class SiteListComponent {
 
-  sites:any
+  sites:any[] = []
   constructor(private api : FunctionSiteService){
 
   }
@@ -19,7 +19,7 @@ export class SiteListComponent {
   getListSites(){
     this.api.getSites().subscribe({
       next : (response)=>{
-        this.sites=response
+        this.sites=response as []
         console.log(response);
         if(!!response) {
         }else{

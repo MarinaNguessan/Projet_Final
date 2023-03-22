@@ -20,6 +20,7 @@ import { PreventiveActionComponent } from './preventive-action/preventive-action
 import { CompanyComponent } from './company/company.component';
 import { LoginComponent } from './authentification/login/login.component';
 import { RegisterComponent } from './authentification/register/register.component';
+import { ChartjsComponent } from './chartjs/chartjs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { RegisterComponent } from './authentification/register/register.componen
     PreventiveActionComponent,
     CompanyComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ChartjsComponent
   ],
   imports: [
     BrowserModule,

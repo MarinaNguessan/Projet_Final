@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './authentification/login/login.component';
 import { RegisterComponent } from './authentification/register/register.component';
+import { ChartjsComponent } from './chartjs/chartjs.component';
 import { CreatePeriodComponent } from './create-period/create-period.component';
 import { CreateSiteComponent } from './create-site/create-site.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -22,8 +23,13 @@ const routes: Routes = [
   ]
 },
 
-{  path:"login", component:LoginComponent},
+ {  path:"login", component:LoginComponent},
 {  path:"register", component:RegisterComponent},
+{  path:"chartjs", component:ChartjsComponent},
+{  path:"", component:LoginComponent},
+
+
+
 
 
 ]
